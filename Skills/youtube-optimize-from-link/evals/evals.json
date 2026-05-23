@@ -1,0 +1,29 @@
+{
+  "skill_name": "youtube-optimize-from-link",
+  "evals": [
+    {
+      "id": 1,
+      "eval_name": "auto-from-one-shorts-link",
+      "use_case": "User gửi một link Shorts BĐS Đà Nẵng và muốn tối ưu tự động",
+      "prompt": "Xử lý link YouTube Shorts này giúp tôi, tạo metadata và lưu file batch: https://www.youtube.com/shorts/abcdefghijk",
+      "expected_output": "Skill chạy AUTO_FROM_LINK, lấy video ID, cố lấy title/transcript, gọi youtube-seo-bds không chờ chọn title, tạo hoặc append output/YYYY-MM-DD/batchX.md và đọc lại file để xác nhận.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "eval_name": "auto-from-multiple-links",
+      "use_case": "User gửi nhiều link cùng lúc",
+      "prompt": "Tối ưu 3 link này và lưu thành batch hôm nay: https://youtu.be/abcdefghijk https://www.youtube.com/watch?v=bcdefghijkl https://www.youtube.com/shorts/cdefghijklm",
+      "expected_output": "Skill xử lý theo đúng thứ tự, mỗi video có block riêng, tối đa 5 video/batch, không dừng giữa chừng vì transcript lỗi.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "eval_name": "no-transcript-still-saves",
+      "use_case": "Video không lấy được transcript",
+      "prompt": "Link này không có transcript nhưng vẫn cần tạo SEO cơ bản và lưu file: https://www.youtube.com/shorts/abcdefghijk",
+      "expected_output": "Skill ghi chú không lấy được transcript, tạo metadata thận trọng từ title/dự án nếu có, vẫn lưu batch và quality check File đã lưu: yes.",
+      "files": []
+    }
+  ]
+}

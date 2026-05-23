@@ -1,0 +1,77 @@
+{
+  "skill_name": "youtube-seo-bds",
+  "evals": [
+    {
+      "id": 1,
+      "eval_name": "tao-metadata-tu-script-day-du",
+      "use_case": "Use Case 1: Tạo metadata từ script/video đầy đủ",
+      "prompt": "Đây là script video tour căn hộ mẫu dự án Masteri Rivera tầng 38, view sông Hàn. Video dài 15 phút. Hãy tạo full metadata cho video này.",
+      "expected_output": "Có phân tích transcript, TITLE ĐÃ CHỌN, TITLE OPTIONS, angle khớp nội dung, description text thuần có contact block, tags ≤500 ký tự, thumbnail khác title, first comment và QUALITY CHECK.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "eval_name": "toi-uu-tu-title-co-san",
+      "use_case": "Use Case 2: Tối ưu metadata từ title có sẵn",
+      "prompt": "Tôi có title video: 'HÉ LỘ CĂN HỘ MASTERI RIVERA TẦNG 38 — VIEW SÔNG HÀN ĐẸP NHẤT'. Hãy viết description, tags, thumbnail text và first comment cho video này.",
+      "expected_output": "Dùng title gốc làm chính, tạo description đúng angle Hé lộ, tags ≤500 ký tự, thumbnail IN HOA 3-5 chữ khác title, title thay thế 3-5 cái, first comment và quality check.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "eval_name": "viet-title-tu-thong-tin-it",
+      "use_case": "Use Case 3: Viết title từ thông tin ít",
+      "prompt": "Tôi muốn làm video về dự án Masteri Rivera Đà Nẵng. Bạn cần hỏi gì để tạo title?",
+      "expected_output": "Hỏi thêm về loại video (ngắn/dài), và loại video cụ thể (tour căn hộ, mở bán, phân tích, etc.). Sau khi có đủ info → 5-8 title gợi ý → dừng chờ user chọn",
+      "files": []
+    },
+    {
+      "id": 4,
+      "eval_name": "trigger-bat-dong-san-da-nang",
+      "use_case": "Triggering test - should trigger",
+      "prompt": "Làm title và description cho video review căn hộ Time Square Đà Nẵng",
+      "expected_output": "Skill kích hoạt, tạo metadata BĐS Đà Nẵng đầy đủ",
+      "files": []
+    },
+    {
+      "id": 5,
+      "eval_name": "trigger-tu-khoa-seo-youtube",
+      "use_case": "Triggering test - should trigger",
+      "prompt": "Tối ưu SEO youtube cho video bất động sản Đà Nẵng của mình",
+      "expected_output": "Skill kích hoạt",
+      "files": []
+    },
+    {
+      "id": 6,
+      "eval_name": "khong-trigger-bat-dong-san-chung",
+      "use_case": "Triggering test - should NOT trigger",
+      "prompt": "Review thị trường bất động sản Việt Nam năm 2026",
+      "expected_output": "Skill KHÔNG kích hoạt (video tổng quát, không phải Đà Nẵng)",
+      "files": []
+    },
+    {
+      "id": 7,
+      "eval_name": "khong-trigger-khong-phai-bds",
+      "use_case": "Triggering test - should NOT trigger",
+      "prompt": "Video nấu ăn món ngon Đà Nẵng",
+      "expected_output": "Skill KHÔNG kích hoạt (không phải BĐS)",
+      "files": []
+    },
+    {
+      "id": 8,
+      "eval_name": "auto-from-link-khong-dung-cho-title",
+      "use_case": "Use Case 4: AUTO_FROM_LINK không dừng chờ user chọn title",
+      "prompt": "MODE: AUTO_FROM_LINK\nURL: https://www.youtube.com/shorts/abcdefghijk\nCURRENT_TITLE: Tour căn hộ mẫu Masteri Rivera view sông Hàn\nVIDEO_TYPE: short\nTRANSCRIPT: Đây là căn hộ mẫu Masteri Rivera Đà Nẵng với view sông Hàn, thiết kế cao cấp, phù hợp khách mua ở và đầu tư.\nOUTPUT_REQUIRED: full metadata + selected title, không dừng chờ user chọn",
+      "expected_output": "Trả đủ metadata trong một lần, có TITLE ĐÃ CHỌN, TITLE OPTIONS, DESCRIPTION, TAGS, THUMBNAIL, FIRST COMMENT, QUALITY CHECK; không hỏi user chọn title.",
+      "files": []
+    },
+    {
+      "id": 9,
+      "eval_name": "description-khong-lac-angle",
+      "use_case": "Use Case 5: Description phải bám angle/title",
+      "prompt": "Viết full metadata cho title: 'VÌ SAO NHÀ ĐẦU TƯ CHÚ Ý MASTERI RIVERA ĐÀ NẴNG?'. Nội dung video phân tích vị trí sông Hàn, pháp lý và tiềm năng cho thuê.",
+      "expected_output": "Description theo angle Insight/Phân tích, không biến thành bài giới thiệu tổng quan dự án, có contact block, hashtag 5-6 cái, không markdown heading.",
+      "files": []
+    }
+  ]
+}
