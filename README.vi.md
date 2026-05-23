@@ -42,13 +42,13 @@ Các thư mục output và dữ liệu làm việc riêng không được đưa 
 
 ## Các Skill Chính
 
-- `Skills/youtube-optimize-from-link/`  
+- `Skills/youtube-optimize-from-link/`
   Skill xử lý từ link. Dùng khi có một hoặc nhiều link YouTube. Skill này lấy thông tin video, lấy transcript nếu có, gọi skill SEO và lưu kết quả vào file batch.
 
-- `Skills/youtube-seo-bds/`  
+- `Skills/youtube-seo-bds/`
   Skill tạo metadata YouTube cho video bất động sản. Skill này quyết định title, description, tags, thumbnail text, first comment, CTA, quality check và format code block để copy.
 
-- `Skills/youtube-sheet-reader/`  
+- `Skills/youtube-sheet-reader/`
   Skill phụ để đọc ngữ cảnh từ sheet hoặc dữ liệu export khi cần.
 
 ## Sau Khi Sửa Thì Khác Gì Bản Gốc?
